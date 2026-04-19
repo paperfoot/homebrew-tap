@@ -1,8 +1,8 @@
 class EmailCli < Formula
   desc "Agent-friendly email CLI for Resend"
   homepage "https://github.com/paperfoot/email-cli"
-  url "https://github.com/paperfoot/email-cli/archive/refs/tags/v0.6.5.tar.gz"
-  sha256 "52e25b16bcfcb6490612390c5131189aa286808616d94b8d79d881de13fea1e4"
+  url "https://github.com/paperfoot/email-cli/archive/refs/tags/v0.6.6.tar.gz"
+  sha256 "950a442c365a35941b626ed3533445d6df00998c4a4eaccb25553c38d851aa80"
   license "MIT"
   head "https://github.com/paperfoot/email-cli.git", branch: "main"
 
