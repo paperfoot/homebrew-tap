@@ -1,24 +1,24 @@
 class Elevenlabs < Formula
   desc "Agent-friendly CLI for the ElevenLabs AI audio platform (TTS, STT, voices, agents, music)"
   homepage "https://github.com/paperfoot/elevenlabs-cli"
-  version "0.3.0"
+  version "0.3.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.3.0/elevenlabs-aarch64-apple-darwin.tar.gz"
-      sha256 "5fa2d1e7231510a4bd365100e697a8ed34cb3d8f329f2a5822dba55c44a293c8"
+      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.3.1/elevenlabs-aarch64-apple-darwin.tar.gz"
+      sha256 "2d03a2a6103fb13fbb102832d3f88ede8d54c3fdbc134f2e938b18ba2b106bd5"
     end
     on_intel do
-      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.3.0/elevenlabs-x86_64-apple-darwin.tar.gz"
-      sha256 "ed4806def794652c81ce3cb2f54e96f02126c4efb4217a0f46d0b4478afd4c1a"
+      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.3.1/elevenlabs-x86_64-apple-darwin.tar.gz"
+      sha256 "071ab68fa3e24c9f3773f95a22b9d90d5d137c974321ec76f9770d16ae2d1301"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.3.0/elevenlabs-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "20aeaa54212dfb3c914e13a50b1735e57323aa86030321e28f5c2f09d14ba146"
+      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.3.1/elevenlabs-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "9d2d90b150218030d668ca519873b833ce47d2857b0ea29e617cf361b897bbc9"
     end
   end
 
