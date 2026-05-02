@@ -7,10 +7,10 @@ Homebrew formulas for [paperfoot](https://github.com/paperfoot) CLIs.
 ```bash
 brew tap paperfoot/tap
 brew install email-cli
-brew install gemini-tts-cli
+brew install gemtts
 ```
 
 ## Formulas
 
 - [`email-cli`](Formula/email-cli.rb) — agent-friendly email CLI for Resend
-- [`gemini-tts-cli`](Formula/gemini-tts-cli.rb) — agent-friendly Gemini TTS CLI for expressive scripts, voices, tags, and audio files
+- [`gemtts`](Formula/gemtts.rb) — agent-friendly Gemini TTS CLI for expressive scripts, voices, tags, and audio files
