@@ -1,8 +1,8 @@
 class Gemtts < Formula
   desc "Agent-friendly Gemini TTS CLI for expressive scripts and audio files"
   homepage "https://github.com/paperfoot/gemtts"
-  url "https://crates.io/api/v1/crates/gemtts/0.1.2/download"
-  sha256 "d262a230d27a4031e4be9ba906ddd469234eebff19f19f01fb42fdfdb7ebb998"
+  url "https://crates.io/api/v1/crates/gemtts/0.1.3/download"
+  sha256 "0adf6b7429e3f0519a522b01bee354b67403d76173686a8beb988c89b4ad1e42"
   license "MIT"
 
   depends_on "rust" => :build
