@@ -1,8 +1,8 @@
 class Akm < Formula
   desc "Agent-driven macOS Keychain CLI for API keys"
   homepage "https://github.com/paperfoot/api-key-manager"
-  url "https://github.com/paperfoot/api-key-manager/archive/refs/tags/v0.1.0.tar.gz"
-  sha256 "0da5d0aa9f04dfa3adce40f0c3b28581e9358369812fe96344b0e7c7c97c596e"
+  url "https://github.com/paperfoot/api-key-manager/archive/refs/tags/v0.1.1.tar.gz"
+  sha256 "7b5e453daa37592b2cb1f5111ea274624d65131b41a0af3ea402d782a3aaf168"
   license "MIT"
   head "https://github.com/paperfoot/api-key-manager.git", branch: "main"
 
@@ -13,7 +13,7 @@ class Akm < Formula
   end
 
   test do
-    assert_match "akm 0.1.0", shell_output("#{bin}/akm --version")
+    assert_match "akm 0.1.1", shell_output("#{bin}/akm --version")
     assert_match "agent-info", shell_output("#{bin}/akm --help")
   end
 end
