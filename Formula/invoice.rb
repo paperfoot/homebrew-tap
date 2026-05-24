@@ -1,8 +1,11 @@
 class Invoice < Formula
   desc "Beautiful invoices from the CLI — international, stateful, agent-friendly"
   homepage "https://github.com/paperfoot/invoice-cli"
-  url "https://github.com/paperfoot/invoice-cli/archive/refs/tags/v0.5.13.tar.gz"
-  sha256 "51ad567502f48c1c7203a48050282b511e51ec96aec711f0ca22a56050ae6f53"
+  # Install from crates.io — same reasoning as the contract formula:
+  # the GitHub source has a path-dep on ../finance-core; the .crate
+  # tarball is already path-free.
+  url "https://static.crates.io/crates/invoice-cli/invoice-cli-0.5.13.crate"
+  sha256 "361b36f05496649859758f82af0754c657be2dfbd87d6e820f6a41d352c0bac4"
   license "MIT"
   head "https://github.com/paperfoot/invoice-cli.git", branch: "main"
 
