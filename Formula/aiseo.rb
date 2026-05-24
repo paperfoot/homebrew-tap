@@ -1,8 +1,8 @@
 class Aiseo < Formula
   desc "Agent-first SEO / GEO / AEO auditor"
   homepage "https://github.com/paperfoot/aiseo"
-  url "https://github.com/paperfoot/aiseo/archive/refs/tags/v0.7.0.tar.gz"
-  sha256 "a203d1af36da23795c870195cd96333947721ccb92a481c67724ac7bf1569cdd"
+  url "https://github.com/paperfoot/aiseo/archive/refs/tags/v0.7.1.tar.gz"
+  sha256 "9517f35a4e52f50136fda9c87cda3a4418f718ee6b00f908a35d7f3014dbe8ca"
   license "MIT"
   head "https://github.com/paperfoot/aiseo.git", branch: "main"
 
