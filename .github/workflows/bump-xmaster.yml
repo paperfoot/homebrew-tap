@@ -1,0 +1,55 @@
+name: Bump xmaster formula
+
+# Keeps Formula/xmaster.rb in sync with the latest paperfoot/xmaster-cli release.
+# Polls on a schedule (xmaster-cli releases can't push here cross-repo), and can be
+# run on demand for an instant bump:  gh workflow run bump-xmaster.yml -R paperfoot/homebrew-tap
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bump if a newer xmaster release exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG=$(gh release view -R paperfoot/xmaster-cli --json tagName -q .tagName)
+          VERSION="${TAG#v}"
+          CURRENT=$(grep -m1 'version "' Formula/xmaster.rb | sed -E 's/.*version "(.*)".*/\1/' || echo "")
+          echo "latest release: ${VERSION}   current formula: ${CURRENT:-none}"
+          if [ "$VERSION" = "$CURRENT" ]; then
+            echo "Formula already current — nothing to do."
+            exit 0
+          fi
+
+          gh release download "$TAG" -R paperfoot/xmaster-cli -p 'xmaster-*' -D dist
+          SHA_ARM_MAC=$(sha256sum dist/xmaster-aarch64-darwin | cut -d' ' -f1)
+          SHA_X86_MAC=$(sha256sum dist/xmaster-x86_64-darwin  | cut -d' ' -f1)
+          SHA_X86_LINUX=$(sha256sum dist/xmaster-x86_64-linux | cut -d' ' -f1)
+
+          curl -fsSL "https://raw.githubusercontent.com/paperfoot/xmaster-cli/main/.github/homebrew/xmaster.rb.tmpl" -o tmpl
+          sed -e "s|@@VERSION@@|${VERSION}|g" \
+              -e "s|@@TAG@@|${TAG}|g" \
+              -e "s|@@SHA_ARM_MAC@@|${SHA_ARM_MAC}|g" \
+              -e "s|@@SHA_X86_MAC@@|${SHA_X86_MAC}|g" \
+              -e "s|@@SHA_X86_LINUX@@|${SHA_X86_LINUX}|g" \
+              tmpl > Formula/xmaster.rb
+          rm -rf tmpl dist
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Formula/xmaster.rb
+          if git diff --cached --quiet; then
+            echo "No change after regeneration."
+            exit 0
+          fi
+          git commit -m "xmaster ${VERSION} (automated)"
+          git push
