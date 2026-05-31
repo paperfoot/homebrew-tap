@@ -1,6 +1,7 @@
 class Xmaster < Formula
   desc "Enterprise-grade X CLI — post, reply, like, retweet, DM, search, and more"
   homepage "https://github.com/paperfoot/xmaster-cli"
+  version "1.7.2"
   license "MIT"
 
   if OS.mac?
