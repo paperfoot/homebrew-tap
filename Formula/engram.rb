@@ -1,7 +1,7 @@
 class Engram < Formula
   desc "Local-first domain expertise and memory CLI for AI agents"
   homepage "https://github.com/paperfoot/engram-cli"
-  url "https://crates.io/api/v1/crates/paperfoot-engram/0.1.4/download"
+  url "https://static.crates.io/crates/paperfoot-engram/paperfoot-engram-0.1.4.crate"
   sha256 "34fafcff44e01f621d7e853fc99d6d3d929064d8ff22dab1654c137cd9a4566b"
   license "MIT"
 
