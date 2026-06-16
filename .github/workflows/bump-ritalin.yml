@@ -1,0 +1,46 @@
+name: Bump ritalin formula
+
+# Keeps Formula/ritalin.rb in sync with the latest paperfoot/ritalin-cli release.
+# Polls on a schedule (ritalin-cli releases can't push here cross-repo), and can be
+# run on demand for an instant bump:  gh workflow run bump-ritalin.yml -R paperfoot/homebrew-tap
+on:
+  schedule:
+    - cron: '15 */6 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  bump:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Bump if a newer ritalin release exists
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          TAG=$(gh release view -R paperfoot/ritalin-cli --json tagName -q .tagName)
+          VERSION="${TAG#v}"
+          CURRENT=$(grep -m1 'refs/tags/v' Formula/ritalin.rb | sed -E 's|.*refs/tags/v([^/]*)\.tar\.gz.*|\1|' || echo "")
+          echo "latest release: ${VERSION}   current formula: ${CURRENT:-none}"
+          if [ "$VERSION" = "$CURRENT" ]; then
+            echo "Formula already current — nothing to do."
+            exit 0
+          fi
+
+          URL="https://github.com/paperfoot/ritalin-cli/archive/refs/tags/${TAG}.tar.gz"
+          SHA=$(curl -fsSL "$URL" | sha256sum | cut -d' ' -f1)
+          sed -i -E "s|^  url \".*\"$|  url \"${URL}\"|" Formula/ritalin.rb
+          sed -i -E "s|^  sha256 \".*\"$|  sha256 \"${SHA}\"|" Formula/ritalin.rb
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add Formula/ritalin.rb
+          if git diff --cached --quiet; then
+            echo "No change after regeneration."
+            exit 0
+          fi
+          git commit -m "ritalin ${VERSION} (automated)"
+          git push
