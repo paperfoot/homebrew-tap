@@ -1,16 +1,16 @@
 class SearchCli < Formula
   desc "Agent-friendly multi-provider search CLI with email verification (13 providers, 13 modes)"
   homepage "https://github.com/paperfoot/search-cli"
-  version "0.7.1"
+  version "0.8.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.7.1/search-aarch64-apple-darwin.tar.gz"
-      sha256 "d92ca7ed40ea15dffae406cc8235b1cedb1266c48f9f21d4b780020a46a82f4c"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.8.0/search-aarch64-apple-darwin.tar.gz"
+      sha256 "d395541471078b433db5a1f4ca2ecf32457c6d3632e6a1d4ee314446af4d9907"
     else
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.7.1/search-x86_64-apple-darwin.tar.gz"
-      sha256 "d65fc6bbaee77692b8fca6a6fb2f65df88b0e5582b3cce8a5b1c113ec4d62384"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.8.0/search-x86_64-apple-darwin.tar.gz"
+      sha256 "3d584bdd6b8e40e4ba5779a2166397200f8f8568ffc36d830b06de7db96f3469"
     end
   end
 
@@ -19,7 +19,7 @@ class SearchCli < Formula
   end
 
   test do
-    assert_match "search 0.7.1", shell_output("#{bin}/search --version")
+    assert_match "search 0.8.0", shell_output("#{bin}/search --version")
     assert_match "verify", shell_output("#{bin}/search --help")
   end
 end
