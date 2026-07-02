@@ -1,5 +1,5 @@
 class SearchCli < Formula
-  desc "Agent-friendly multi-provider search CLI with email verification (12 providers, 13 modes)"
+  desc "Agent-friendly multi-provider search CLI with email verification (13 providers, 13 modes)"
   homepage "https://github.com/paperfoot/search-cli"
   version "0.7.1"
   license "MIT"
