@@ -4,6 +4,8 @@ class Nanaban < Formula
   version "4.3.0"
   license "MIT"
 
+  deprecate! date: "2026-07-13", because: "renamed to slika (brew install paperfoot/tap/slika)"
+
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/paperfoot/nanaban-cli/releases/download/v4.3.0/nanaban-darwin-arm64"
