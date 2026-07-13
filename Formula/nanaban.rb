@@ -1,28 +1,26 @@
 class Nanaban < Formula
   desc "Image generation from the terminal (GPT Image 2, Nano Banana, GPT-5 Image)"
-  homepage "https://github.com/paperfoot/nanaban-cli"
-  version "4.3.0"
+  homepage "https://github.com/paperfoot/nanaban"
+  version "5.0.1"
   license "MIT"
-
-  deprecate! date: "2026-07-13", because: "renamed to slika (brew install paperfoot/tap/slika)"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/paperfoot/nanaban-cli/releases/download/v4.3.0/nanaban-darwin-arm64"
-      sha256 "b6aef8c3d25ec7ee7b9595406c9661a22bee8f26fff34e605110082e4a5af650"
+      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.0.1/nanaban-darwin-arm64"
+      sha256 "ce81c28356f802fe35fb99900680d28709053966d27694e61150d87a08161d46"
     else
-      url "https://github.com/paperfoot/nanaban-cli/releases/download/v4.3.0/nanaban-darwin-x64"
-      sha256 "16843d7c7b70c3c1f7d1a3b06560c51da0c17fe1bdadbf2f85ca6da7e911ae9f"
+      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.0.1/nanaban-darwin-x64"
+      sha256 "bc09dd64a8162f3bab87b3cdf43108bad1cb7dccaee0f32e17cda16381834bc1"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/paperfoot/nanaban-cli/releases/download/v4.3.0/nanaban-linux-arm64"
-      sha256 "8761f8f42c0a5299bba29ba2a8ab271cf809be820ff4a621e1f16c46690f8f89"
+      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.0.1/nanaban-linux-arm64"
+      sha256 "4e9b775489b87187305e29be6e233ce38c18253d53ce5531bd65a75569cbd142"
     else
-      url "https://github.com/paperfoot/nanaban-cli/releases/download/v4.3.0/nanaban-linux-x64"
-      sha256 "c448d0502f371f7c9bd5f81acdd7fa614f41a606586dc171e8fcccf4b4f318cd"
+      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.0.1/nanaban-linux-x64"
+      sha256 "9b741cb5b15ed7c8b26596dc82f9a65ead7c924008300a272bfe1057d9f63506"
     end
   end
 
