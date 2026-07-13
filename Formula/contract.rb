@@ -5,8 +5,8 @@ class Contract < Formula
   # source has a path-dep on ../finance-core which doesn't resolve at
   # brew build time. `cargo publish` already rewrote the dep to a
   # registry version in the .crate tarball.
-  url "https://static.crates.io/crates/contract-cli/contract-cli-0.2.0.crate"
-  sha256 "df2db217e134222ba36bb759fba896e3b908fb043d56ab19a786f4a49aa797e2"
+  url "https://static.crates.io/crates/contract-cli/contract-cli-0.2.1.crate"
+  sha256 "d0556d4a9694b15f500be43cc3cfe3febd073d51e76a9a065e4971e9abfdbf4f"
   license "MIT"
   head "https://github.com/paperfoot/contract-cli.git", branch: "main"
 
