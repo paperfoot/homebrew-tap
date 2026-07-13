@@ -1,12 +1,12 @@
 class Contract < Formula
-  desc "Beautiful contracts from the CLI — NDA, consulting, MSA, SOW, service"
+  desc "Beautiful contracts from the CLI — NDA, NCNDA, consulting, MSA, SOW, service, loan"
   homepage "https://github.com/paperfoot/contract-cli"
   # Install from crates.io rather than the GitHub tarball — the GitHub
   # source has a path-dep on ../finance-core which doesn't resolve at
   # brew build time. `cargo publish` already rewrote the dep to a
   # registry version in the .crate tarball.
-  url "https://static.crates.io/crates/contract-cli/contract-cli-0.1.0.crate"
-  sha256 "6d0f998ea2bb13bbec7be191883e3868c98882bd75f8818c29779422300719fc"
+  url "https://static.crates.io/crates/contract-cli/contract-cli-0.2.0.crate"
+  sha256 "df2db217e134222ba36bb759fba896e3b908fb043d56ab19a786f4a49aa797e2"
   license "MIT"
   head "https://github.com/paperfoot/contract-cli.git", branch: "main"
 
