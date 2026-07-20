@@ -5,25 +5,25 @@ class Suno < Formula
 
   on_macos do
     on_arm do
-      url "https://github.com/paperfoot/suno-cli/releases/download/v0.6.0/suno-aarch64-apple-darwin.tar.gz"
-      sha256 "193e8865293da0c1235ba7ee66a77dac7bc4fe39f9b5a7e239635ddb5bf22ee8"
+      url "https://github.com/paperfoot/suno-cli/releases/download/v0.7.0/suno-aarch64-apple-darwin.tar.gz"
+      sha256 "09ee19eb34d78cd5f958e6f52aa79f8c3271bf5ecb5a3f6cc2f0fb6b767f4ad8"
     end
 
     on_intel do
-      url "https://github.com/paperfoot/suno-cli/releases/download/v0.6.0/suno-x86_64-apple-darwin.tar.gz"
-      sha256 "8f451f333dda3a9ac409e6930bef3754cb4d4eb0d897929ab1c1572ebd36d4dc"
+      url "https://github.com/paperfoot/suno-cli/releases/download/v0.7.0/suno-x86_64-apple-darwin.tar.gz"
+      sha256 "27c489a54fbd4d32d5efa9d9e4771027befd08fb6c456b761f6e55afcd6f508b"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/paperfoot/suno-cli/releases/download/v0.6.0/suno-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "b5fb9cf3cc1d877170f6135115a2c82bd40f442780aa910de67b3e8ba9f363d2"
+      url "https://github.com/paperfoot/suno-cli/releases/download/v0.7.0/suno-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "75f4beb8db362c1de7870b64605d237b2fa531a0ac626cc597896d5e411898b7"
     end
 
     on_intel do
-      url "https://github.com/paperfoot/suno-cli/releases/download/v0.6.0/suno-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "4e495ad2592762a4c181eece0ad8fc67ae1417576d95fe5dbab438495b8d6839"
+      url "https://github.com/paperfoot/suno-cli/releases/download/v0.7.0/suno-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "b80bb8aa8349fa8782c14644cb43a54c4f95cf97a2d4e846c0a3e1d6c48e5a8e"
     end
   end
 
@@ -32,7 +32,7 @@ class Suno < Formula
   end
 
   test do
-    assert_match "suno 0.6.0", shell_output("#{bin}/suno --version")
+    assert_match "suno 0.7.0", shell_output("#{bin}/suno --version")
     assert_match "agent-info", shell_output("#{bin}/suno --help")
   end
 end
