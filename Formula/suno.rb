@@ -1,29 +1,29 @@
 class Suno < Formula
-  desc "Generate AI music from your terminal for Suno v5.5"
+  desc "Write and generate AI music from your terminal for Suno v5.5"
   homepage "https://github.com/paperfoot/suno-cli"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/paperfoot/suno-cli/releases/download/v0.7.0/suno-aarch64-apple-darwin.tar.gz"
-      sha256 "09ee19eb34d78cd5f958e6f52aa79f8c3271bf5ecb5a3f6cc2f0fb6b767f4ad8"
+      url "https://github.com/paperfoot/suno-cli/releases/download/v0.8.0/suno-aarch64-apple-darwin.tar.gz"
+      sha256 "9ffd2979ca5a36f7910be25d7cdde2dd4fb20b4f734487891637dcb0cb611a79"
     end
 
     on_intel do
-      url "https://github.com/paperfoot/suno-cli/releases/download/v0.7.0/suno-x86_64-apple-darwin.tar.gz"
-      sha256 "27c489a54fbd4d32d5efa9d9e4771027befd08fb6c456b761f6e55afcd6f508b"
+      url "https://github.com/paperfoot/suno-cli/releases/download/v0.8.0/suno-x86_64-apple-darwin.tar.gz"
+      sha256 "34c0c5cd8a13d72ae55ff950d295e4afb186a40fc19930d9ce26d4a5bce89cd8"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/paperfoot/suno-cli/releases/download/v0.7.0/suno-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "75f4beb8db362c1de7870b64605d237b2fa531a0ac626cc597896d5e411898b7"
+      url "https://github.com/paperfoot/suno-cli/releases/download/v0.8.0/suno-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "7da6c7359bb73866e81057688be46e4a43ee0244bc2885da63396bef3d416027"
     end
 
     on_intel do
-      url "https://github.com/paperfoot/suno-cli/releases/download/v0.7.0/suno-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "b80bb8aa8349fa8782c14644cb43a54c4f95cf97a2d4e846c0a3e1d6c48e5a8e"
+      url "https://github.com/paperfoot/suno-cli/releases/download/v0.8.0/suno-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "86bb3027f8603b32113e3a9c38aba6f814135b07f10387f085466ab6da108943"
     end
   end
 
@@ -32,7 +32,7 @@ class Suno < Formula
   end
 
   test do
-    assert_match "suno 0.7.0", shell_output("#{bin}/suno --version")
+    assert_match "suno 0.8.0", shell_output("#{bin}/suno --version")
     assert_match "agent-info", shell_output("#{bin}/suno --help")
   end
 end
