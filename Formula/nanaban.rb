@@ -1,26 +1,26 @@
 class Nanaban < Formula
   desc "Image generation from the terminal (GPT Image 2, Nano Banana, GPT-5 Image)"
-  homepage "https://github.com/paperfoot/nanaban"
-  version "5.0.1"
+  homepage "https://github.com/paperfoot/nanaban-cli"
+  version "5.1.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.0.1/nanaban-darwin-arm64"
-      sha256 "ce81c28356f802fe35fb99900680d28709053966d27694e61150d87a08161d46"
+      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.1.0/nanaban-darwin-arm64"
+      sha256 "02a865c2ff2b6322a2df0395d903ac8024bbd520d4f3d2586040be1e9010f4f9"
     else
-      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.0.1/nanaban-darwin-x64"
-      sha256 "bc09dd64a8162f3bab87b3cdf43108bad1cb7dccaee0f32e17cda16381834bc1"
+      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.1.0/nanaban-darwin-x64"
+      sha256 "1b4a08f13b4e020f736d085658f8590ed846df7af16dd144e84c344c6221569a"
     end
   end
 
   on_linux do
     if Hardware::CPU.arm?
-      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.0.1/nanaban-linux-arm64"
-      sha256 "4e9b775489b87187305e29be6e233ce38c18253d53ce5531bd65a75569cbd142"
+      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.1.0/nanaban-linux-arm64"
+      sha256 "26779ba9cc6f873bfc9d9cb90bea2c5b46f0e982d587fa3d08bcb4b40648cb9a"
     else
-      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.0.1/nanaban-linux-x64"
-      sha256 "9b741cb5b15ed7c8b26596dc82f9a65ead7c924008300a272bfe1057d9f63506"
+      url "https://github.com/paperfoot/nanaban-cli/releases/download/v5.1.0/nanaban-linux-x64"
+      sha256 "069ceae06cf9a7db3de53b5af8a5a525c1dcf2f3e0b5c22ab1ee5329db8fc981"
     end
   end
 
