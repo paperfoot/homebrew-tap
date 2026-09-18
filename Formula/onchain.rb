@@ -1,7 +1,6 @@
 class Onchain < Formula
   desc "Fast EVM and Zcash queries, transaction investigation, and swap quotes"
   homepage "https://github.com/paperfoot/onchain-cli"
-  version "0.2.2"
   license "MIT"
 
   on_macos do
