@@ -1,24 +1,24 @@
 class Elevenlabs < Formula
   desc "CLI for ElevenLabs speech, transcription, music, voices, and agents"
   homepage "https://github.com/paperfoot/elevenlabs-cli"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.4.0/elevenlabs-aarch64-apple-darwin.tar.gz"
-      sha256 "efcfb38554911ba1e27ca053189fdb9faa9b2f408d209cfd097365e039b2aec1"
+      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.4.1/elevenlabs-aarch64-apple-darwin.tar.gz"
+      sha256 "230731066dd0f65a98ac20e78d9a2c2311a9f5535ee5d3ba8de8c424c1b679be"
     end
     on_intel do
-      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.4.0/elevenlabs-x86_64-apple-darwin.tar.gz"
-      sha256 "4977a517ef56edff3d1bd9191c9679b349f97d1b27bd502e0261fd1aed9f147a"
+      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.4.1/elevenlabs-x86_64-apple-darwin.tar.gz"
+      sha256 "328be14273b626d812fca3baaf088539b9d4055a123908b60dc41d16c2e4abdf"
     end
   end
 
   on_linux do
     on_intel do
-      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.4.0/elevenlabs-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "9a2b6c2aee3d892904674d5c4f75b9e6fd0be12682ab6a2f8e2327b8008034fa"
+      url "https://github.com/paperfoot/elevenlabs-cli/releases/download/v0.4.1/elevenlabs-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "85b0d5f4bba5578f0d0dc2f89ce45d62134988bae4769087203725133285413f"
     end
   end
 
@@ -41,7 +41,7 @@ class Elevenlabs < Formula
     assert_equal ["tts <text>"], scoped.fetch("commands").keys
 
     catalog = JSON.parse(shell_output("#{bin}/elevenlabs api list"))
-    assert_equal 391, catalog.fetch("data").fetch("total_operations")
+    assert_equal 406, catalog.fetch("data").fetch("total_operations")
     preview = JSON.parse(shell_output("#{bin}/elevenlabs api call history.list --query page_size=2 --dry-run"))
     assert_equal 2, preview.fetch("data").fetch("query").fetch("page_size")
   end
