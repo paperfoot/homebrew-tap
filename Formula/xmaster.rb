@@ -1,20 +1,20 @@
 class Xmaster < Formula
   desc "Enterprise-grade X CLI — post, reply, like, retweet, DM, search, and more"
   homepage "https://github.com/paperfoot/xmaster-cli"
-  version "1.8.0"
+  version "1.9.1"
   license "MIT"
 
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/paperfoot/xmaster-cli/releases/download/v1.8.0/xmaster-aarch64-darwin"
-      sha256 "024c527e7771581a2b79a025444868d552305405594317a0af6b6ea1ff565f4e"
+      url "https://github.com/paperfoot/xmaster-cli/releases/download/v1.9.1/xmaster-aarch64-darwin"
+      sha256 "2cf7335cb7d3b20b7d35c3aea48ba1325e51b800c9bac20a54b79843240cd0e5"
     else
-      url "https://github.com/paperfoot/xmaster-cli/releases/download/v1.8.0/xmaster-x86_64-darwin"
-      sha256 "d1b3fc98d9acccdf8e6948f189cd3a7863702c0e738bd08392412ca5fc130da1"
+      url "https://github.com/paperfoot/xmaster-cli/releases/download/v1.9.1/xmaster-x86_64-darwin"
+      sha256 "38f4769208b0ec6a583657713c1433927cd28d05487e44a2d2a1a35cf69e6256"
     end
   elsif OS.linux?
-    url "https://github.com/paperfoot/xmaster-cli/releases/download/v1.8.0/xmaster-x86_64-linux"
-    sha256 "869d35571a43f742e74c440013976a6c4b266274545907a9b6367338fb8a5127"
+    url "https://github.com/paperfoot/xmaster-cli/releases/download/v1.9.1/xmaster-x86_64-linux"
+    sha256 "9b65e995013dd3ce0b931058a1e9ac9ee7f5ef39fb0f51a9aea722ec934530ee"
   end
 
   def install
