@@ -1,17 +1,17 @@
 class Akm < Formula
   desc "Use macOS Keychain secrets in commands without copying their values"
   homepage "https://github.com/paperfoot/api-key-manager"
-  version "0.3.0"
+  version "0.4.0"
   license "MIT"
 
   on_arm do
-    url "https://github.com/paperfoot/api-key-manager/releases/download/v0.3.0/akm-arm64-apple-darwin.tar.gz"
-    sha256 "a1aa20d9fc1a32c56f1dbdde1d457098632976cee95446828ef718da8d07297f"
+    url "https://github.com/paperfoot/api-key-manager/releases/download/v0.4.0/akm-arm64-apple-darwin.tar.gz"
+    sha256 "af4ea3787c58cfa2c15263a94c19d628865df962bcd3273215b05e5d8256bb0e"
   end
 
   on_intel do
-    url "https://github.com/paperfoot/api-key-manager/releases/download/v0.3.0/akm-x86_64-apple-darwin.tar.gz"
-    sha256 "3a8508c4a833bf51d3e383c899a02e87ec18b3f7eac3b958d165edd6ebab9f8a"
+    url "https://github.com/paperfoot/api-key-manager/releases/download/v0.4.0/akm-x86_64-apple-darwin.tar.gz"
+    sha256 "85b5c2203e7c18a5ed8bb2a2d9efafc0095790821d3f49bc71524510aecf11e3"
   end
 
   depends_on :macos => :sequoia
