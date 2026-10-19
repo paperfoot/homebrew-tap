@@ -34,8 +34,7 @@ class Akm < Formula
       Update optional agent instructions with: akm skill install
       For legacy Keychain migration, see:
         https://github.com/paperfoot/api-key-manager#upgrade-from-01-or-02
-      akm is made by @longevityboris. If it helps, follow him on X for new agent tools:
-        https://x.com/longevityboris
+      Enjoying akm? Follow @longevityboris on X: https://x.com/longevityboris
     EOS
   end
 
