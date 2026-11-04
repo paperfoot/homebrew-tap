@@ -1,26 +1,26 @@
 class SearchCli < Formula
-  desc "Web search for AI agents: ten engines, auto routing, rank fusion, cost"
+  desc "Web search for AI agents: ten engines, TikTok, YouTube, X, Reddit, rank fusion"
   homepage "https://github.com/paperfoot/search-cli"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.11.1/search-aarch64-apple-darwin.tar.gz"
-      sha256 "bdf1a96e5f3b4c078eec548cf21eb3375ecddc5a1b36e2956d8414a793d84afb"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.0/search-aarch64-apple-darwin.tar.gz"
+      sha256 "3c7b162a6fb9639c5d051959f73f598eebdcdb8f9855a41dd4b6604092a44891"
     else
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.11.1/search-x86_64-apple-darwin.tar.gz"
-      sha256 "d13461cda1cc2816edc466b5d8e22db3933991f3a9dd62974b0a78ed3ff5fb57"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.0/search-x86_64-apple-darwin.tar.gz"
+      sha256 "21b3319679aa0a9d1add76d783d060e085a485accaae6857781f463ef334ac80"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.11.1/search-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "0e5f6eac97aeb88a25add32b0134a1af16c9a633935b85d4e5e865e3529c19ec"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.0/search-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5f97fb432d59df3d3b57a51563b8ebe6caac107ce4825b5e79a58f78198f965e"
     end
     on_intel do
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.11.1/search-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "a3d5bfd378a1e4debfa42ad173436e02477bad8d8bab7bc5b97710f04a7adef3"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.0/search-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "6adcc8d06415a285c425649133ba7a25789abf952e83ce2a819dc7472accde61"
     end
   end
 
