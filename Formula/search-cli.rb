@@ -5,22 +5,22 @@ class SearchCli < Formula
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.1/search-aarch64-apple-darwin.tar.gz"
-      sha256 "6e047d66c6194d632cbb4e5d9e834fbfbca805c670d1b85507f67439d1276445"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.2/search-aarch64-apple-darwin.tar.gz"
+      sha256 "da517288c63d74ec201ba0307a9e5c68bcd04343240dc60e2ad13377efd46be3"
     else
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.1/search-x86_64-apple-darwin.tar.gz"
-      sha256 "cb6c1d30183a86191a23ee504f8245e4635a5a1a5d2346bcd03ce462103f29d3"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.2/search-x86_64-apple-darwin.tar.gz"
+      sha256 "d137eafc5fbd22f40c44ab5ba20b5b91e61516bfbca8014e0cdd115db42f8c18"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.1/search-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "5f3350850766eb1f3cf6e933f732a7da26ff6cbfeb851601a301548caabf4cd2"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.2/search-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "ccdcd6bb794d235a68dffe9e5e97065da07f846ca6f0751b2fb30ed476219078"
     end
     on_intel do
-      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.1/search-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "2a03425ab26c6a00d821e6ccb36e20fcb638b68be4a03854c48ad51ca8a02e3e"
+      url "https://github.com/paperfoot/search-cli/releases/download/v0.12.2/search-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2fa58e83698b38be01ba726a7ab56bfcf38885d29ac9d5faa6c6e834e3f6aa5a"
     end
   end
 
